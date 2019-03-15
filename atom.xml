@@ -41,31 +41,6 @@
   </entry>
   
   <entry>
-    <title>CS:APP笔记(持续更新)</title>
-    <link href="https://domyslavy.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/CSAPP%E7%AC%94%E8%AE%B0/"/>
-    <id>https://domyslavy.github.io/计算机原理/CSAPP笔记/</id>
-    <published>2019-03-03T01:02:34.000Z</published>
-    <updated>2019-03-15T08:30:19.122Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="主存是什么"><a href="#主存是什么" class="headerlink" title="主存是什么?"></a>主存是什么?</h4><p>讲到主存，就应该知道计算机存储器类型，计算机存储器类型分为两种:</p><p>易失性存储器（内存）、非易失性存储器（外存）。其中内存就是我们常言道的随机存取存储器（Random Access Memory，RAM）。那你是否听说过Cache（高速缓冲存储器），那这个与内存有什么联系呢? 我们常说的内存条又是啥关系呢？那我们通常指的是DRAM（动态随机存取存储器）、SRAM（静态随机存取存储器）是啥联系呢？</p><a id="more"></a> <p>首先我们先搞清楚内存的定义:</p><blockquote><p><strong>随机存取存储器</strong>（英语：<strong>R</strong>andom <strong>A</strong>ccess <strong>M</strong>emory，缩写：<strong>RAM</strong>），也叫<strong>主存</strong>，是与CPU直接交换数据的内部存储器。它可以随时读写（刷新时除外），而且速度很快，通常作为操作系统或其他正在运行中的程序的临时数据存储介质。（来源于维基百科）</p></blockquote><p>从以上定义可知，主存是一个等价于内存的东西，内存条如今（2019年）常用版本为DDR3、DDR4。</p><blockquote><p>DDR是Double Data Rate的简称，其全称为（英语：<strong>Double Data Rate Synchronous Dynamic Random Access Memory</strong>，简称<strong>DDR SDRAM</strong>）为具有<a href="https://zh.wikipedia.org/w/index.php?title=%E9%9B%99%E5%80%8D%E8%B3%87%E6%96%99%E5%82%B3%E8%BC%B8%E7%8E%87&amp;action=edit&amp;redlink=1" target="_blank" rel="noopener">双倍数据传输率</a>的<a href="https://zh.wikipedia.org/wiki/SDRAM" target="_blank" rel="noopener">SDRAM</a>，其数据传输速度为系统时脉的两倍，由于速度增加，其传输性能优于传统的SDRAM。（来源于维基百科）</p></blockquote><p>由此可知内存条其实就是我们所熟知的DRAM，只不过是一种DRAM的更高级的版本。而我们常知的Cache是SRAM。</p><blockquote><p><strong>静态随机存取存储器</strong>（<strong>S</strong>tatic <strong>R</strong>andom-<strong>A</strong>ccess <strong>M</strong>emory，<strong>SRAM</strong>）是<a href="https://zh.wikipedia.org/wiki/%E9%9A%8F%E6%9C%BA%E5%AD%98%E5%8F%96%E5%AD%98%E5%82%A8%E5%99%A8" target="_blank" rel="noopener">随机存取存储器</a>的一种。所谓的“静态”，是指这种存储器只要保持<a href="https://zh.wikipedia.org/wiki/%E9%9B%BB" target="_blank" rel="noopener">通电</a>，里面储存的数据就可以恒常保持。相对之下，<a href="https://zh.wikipedia.org/wiki/%E5%8B%95%E6%85%8B%E9%9A%A8%E6%A9%9F%E5%AD%98%E5%8F%96%E8%A8%98%E6%86%B6%E9%AB%94" target="_blank" rel="noopener">动态随机存取存储器</a>（DRAM）里面所储存的数据就需要周期性地更新。然而，当电力供应停止时，SRAM储存的数据还是会消失（被称为volatile memory），这与在断电后还能储存资料的<a href="https://zh.wikipedia.org/wiki/ROM" target="_blank" rel="noopener">ROM</a>或<a href="https://zh.wikipedia.org/wiki/%E5%BF%AB%E9%96%83%E8%A8%98%E6%86%B6%E9%AB%94" target="_blank" rel="noopener">闪存</a>是不同的。（来源于维基百科）</p></blockquote><p>主存（Main memory）即计算机内部最主要的存储器，用来加载各式各样的程序与数据以供CPU直接运行与运用。DRAM由于造价便宜，速度也很快，所以普及很多。DRAM每一个比特的数据都只需一个电容跟一个晶体管来处理，相比之下在SRAM上一个比特通常需要六个晶体管。正因这缘故，DRAM拥有非常高的密度，单位体积的容量较高因此成本较低。但相反的，DRAM也有访问速度较慢，耗电量较大的缺点。</p><p><img src="/images/image1.png" alt="csapp1.1"></p><p>所以内存 $\approx $ DRAM + SRAM ，随着硬件技术的更替，以后应该远远不局限这两种。而ROM大家想了解的话，<a href="https://zh.wikipedia.org/wiki/%E5%94%AF%E8%AE%80%E8%A8%98%E6%86%B6%E9%AB%94" target="_blank" rel="noopener">请点击这里</a>。另外也推荐看一下这个<a href="https://zhidao.baidu.com/question/18479480.html" target="_blank" rel="noopener">知道答案 gbxwal 回答</a>。 </p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;主存是什么&quot;&gt;&lt;a href=&quot;#主存是什么&quot; class=&quot;headerlink&quot; title=&quot;主存是什么?&quot;&gt;&lt;/a&gt;主存是什么?&lt;/h4&gt;&lt;p&gt;讲到主存，就应该知道计算机存储器类型，计算机存储器类型分为两种:&lt;/p&gt;
-&lt;p&gt;易失性存储器（内存）、非易失性存储器（外存）。其中内存就是我们常言道的随机存取存储器（Random Access Memory，RAM）。那你是否听说过Cache（高速缓冲存储器），那这个与内存有什么联系呢? 我们常说的内存条又是啥关系呢？那我们通常指的是DRAM（动态随机存取存储器）、SRAM（静态随机存取存储器）是啥联系呢？&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="计算机原理" scheme="https://domyslavy.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/"/>
-    
-    
-      <category term="计算机原理" scheme="https://domyslavy.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/"/>
-    
-      <category term="CMU" scheme="https://domyslavy.github.io/tags/CMU/"/>
-    
-  </entry>
-  
-  <entry>
     <title>C语言与python的执行过程</title>
     <link href="https://domyslavy.github.io/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/C%E8%AF%AD%E8%A8%80%E4%B8%8Epython%E7%9A%84%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B/"/>
     <id>https://domyslavy.github.io/编译原理/C语言与python的编译过程/</id>
@@ -92,6 +67,31 @@
       <category term="python" scheme="https://domyslavy.github.io/tags/python/"/>
     
       <category term="编译原理" scheme="https://domyslavy.github.io/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CS:APP笔记(持续更新)</title>
+    <link href="https://domyslavy.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/CSAPP%E7%AC%94%E8%AE%B0/"/>
+    <id>https://domyslavy.github.io/计算机原理/CSAPP笔记/</id>
+    <published>2019-03-03T01:02:34.000Z</published>
+    <updated>2019-03-15T08:30:19.122Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="主存是什么"><a href="#主存是什么" class="headerlink" title="主存是什么?"></a>主存是什么?</h4><p>讲到主存，就应该知道计算机存储器类型，计算机存储器类型分为两种:</p><p>易失性存储器（内存）、非易失性存储器（外存）。其中内存就是我们常言道的随机存取存储器（Random Access Memory，RAM）。那你是否听说过Cache（高速缓冲存储器），那这个与内存有什么联系呢? 我们常说的内存条又是啥关系呢？那我们通常指的是DRAM（动态随机存取存储器）、SRAM（静态随机存取存储器）是啥联系呢？</p><a id="more"></a> <p>首先我们先搞清楚内存的定义:</p><blockquote><p><strong>随机存取存储器</strong>（英语：<strong>R</strong>andom <strong>A</strong>ccess <strong>M</strong>emory，缩写：<strong>RAM</strong>），也叫<strong>主存</strong>，是与CPU直接交换数据的内部存储器。它可以随时读写（刷新时除外），而且速度很快，通常作为操作系统或其他正在运行中的程序的临时数据存储介质。（来源于维基百科）</p></blockquote><p>从以上定义可知，主存是一个等价于内存的东西，内存条如今（2019年）常用版本为DDR3、DDR4。</p><blockquote><p>DDR是Double Data Rate的简称，其全称为（英语：<strong>Double Data Rate Synchronous Dynamic Random Access Memory</strong>，简称<strong>DDR SDRAM</strong>）为具有<a href="https://zh.wikipedia.org/w/index.php?title=%E9%9B%99%E5%80%8D%E8%B3%87%E6%96%99%E5%82%B3%E8%BC%B8%E7%8E%87&amp;action=edit&amp;redlink=1" target="_blank" rel="noopener">双倍数据传输率</a>的<a href="https://zh.wikipedia.org/wiki/SDRAM" target="_blank" rel="noopener">SDRAM</a>，其数据传输速度为系统时脉的两倍，由于速度增加，其传输性能优于传统的SDRAM。（来源于维基百科）</p></blockquote><p>由此可知内存条其实就是我们所熟知的DRAM，只不过是一种DRAM的更高级的版本。而我们常知的Cache是SRAM。</p><blockquote><p><strong>静态随机存取存储器</strong>（<strong>S</strong>tatic <strong>R</strong>andom-<strong>A</strong>ccess <strong>M</strong>emory，<strong>SRAM</strong>）是<a href="https://zh.wikipedia.org/wiki/%E9%9A%8F%E6%9C%BA%E5%AD%98%E5%8F%96%E5%AD%98%E5%82%A8%E5%99%A8" target="_blank" rel="noopener">随机存取存储器</a>的一种。所谓的“静态”，是指这种存储器只要保持<a href="https://zh.wikipedia.org/wiki/%E9%9B%BB" target="_blank" rel="noopener">通电</a>，里面储存的数据就可以恒常保持。相对之下，<a href="https://zh.wikipedia.org/wiki/%E5%8B%95%E6%85%8B%E9%9A%A8%E6%A9%9F%E5%AD%98%E5%8F%96%E8%A8%98%E6%86%B6%E9%AB%94" target="_blank" rel="noopener">动态随机存取存储器</a>（DRAM）里面所储存的数据就需要周期性地更新。然而，当电力供应停止时，SRAM储存的数据还是会消失（被称为volatile memory），这与在断电后还能储存资料的<a href="https://zh.wikipedia.org/wiki/ROM" target="_blank" rel="noopener">ROM</a>或<a href="https://zh.wikipedia.org/wiki/%E5%BF%AB%E9%96%83%E8%A8%98%E6%86%B6%E9%AB%94" target="_blank" rel="noopener">闪存</a>是不同的。（来源于维基百科）</p></blockquote><p>主存（Main memory）即计算机内部最主要的存储器，用来加载各式各样的程序与数据以供CPU直接运行与运用。DRAM由于造价便宜，速度也很快，所以普及很多。DRAM每一个比特的数据都只需一个电容跟一个晶体管来处理，相比之下在SRAM上一个比特通常需要六个晶体管。正因这缘故，DRAM拥有非常高的密度，单位体积的容量较高因此成本较低。但相反的，DRAM也有访问速度较慢，耗电量较大的缺点。</p><p><img src="/images/image1.png" alt="csapp1.1"></p><p>所以内存 $\approx $ DRAM + SRAM ，随着硬件技术的更替，以后应该远远不局限这两种。而ROM大家想了解的话，<a href="https://zh.wikipedia.org/wiki/%E5%94%AF%E8%AE%80%E8%A8%98%E6%86%B6%E9%AB%94" target="_blank" rel="noopener">请点击这里</a>。另外也推荐看一下这个<a href="https://zhidao.baidu.com/question/18479480.html" target="_blank" rel="noopener">知道答案 gbxwal 回答</a>。 </p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;主存是什么&quot;&gt;&lt;a href=&quot;#主存是什么&quot; class=&quot;headerlink&quot; title=&quot;主存是什么?&quot;&gt;&lt;/a&gt;主存是什么?&lt;/h4&gt;&lt;p&gt;讲到主存，就应该知道计算机存储器类型，计算机存储器类型分为两种:&lt;/p&gt;
+&lt;p&gt;易失性存储器（内存）、非易失性存储器（外存）。其中内存就是我们常言道的随机存取存储器（Random Access Memory，RAM）。那你是否听说过Cache（高速缓冲存储器），那这个与内存有什么联系呢? 我们常说的内存条又是啥关系呢？那我们通常指的是DRAM（动态随机存取存储器）、SRAM（静态随机存取存储器）是啥联系呢？&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="计算机原理" scheme="https://domyslavy.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/"/>
+    
+    
+      <category term="计算机原理" scheme="https://domyslavy.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86/"/>
+    
+      <category term="CMU" scheme="https://domyslavy.github.io/tags/CMU/"/>
     
   </entry>
   
