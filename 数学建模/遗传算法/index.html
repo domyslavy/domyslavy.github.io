@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="数学建模,优化,">
 
 
 
@@ -81,17 +81,21 @@
 
 
 
-<meta name="description" content="我是一个普通的计算机17级本科生">
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="https://domyslavy.github.io/about/index.html">
+<meta name="description" content="说在前面: 遗传算法（genetic algorithm，GA）是模拟自然界生物进化的机制的一种算法，即遵循适者生存、优胜劣汰的法则，也就是寻优过程中仿照遗传机制，将优秀基因（建模的重点）进行选择（selection）、交叉(crossover)、变异(mutation)，其中由适应度函数来判断基因的优劣，，以产生更加优秀的基因为目的，使基因不断进化的一种算法。">
+<meta name="keywords" content="数学建模,优化">
+<meta property="og:type" content="article">
+<meta property="og:title" content="优化算法之遗传算法">
+<meta property="og:url" content="https://domyslavy.github.io/数学建模/遗传算法/index.html">
 <meta property="og:site_name" content="domyslavy&#39;blogs">
-<meta property="og:description" content="我是一个普通的计算机17级本科生">
+<meta property="og:description" content="说在前面: 遗传算法（genetic algorithm，GA）是模拟自然界生物进化的机制的一种算法，即遵循适者生存、优胜劣汰的法则，也就是寻优过程中仿照遗传机制，将优秀基因（建模的重点）进行选择（selection）、交叉(crossover)、变异(mutation)，其中由适应度函数来判断基因的优劣，，以产生更加优秀的基因为目的，使基因不断进化的一种算法。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-22T11:37:45.477Z">
+<meta property="og:image" content="d:/bolgs/source/images/遗传算法步骤.png">
+<meta property="og:image" content="d:/bolgs/source/images/交叉算子例子.png">
+<meta property="og:updated_time" content="2019-03-15T08:32:50.012Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
-<meta name="twitter:description" content="我是一个普通的计算机17级本科生">
+<meta name="twitter:title" content="优化算法之遗传算法">
+<meta name="twitter:description" content="说在前面: 遗传算法（genetic algorithm，GA）是模拟自然界生物进化的机制的一种算法，即遵循适者生存、优胜劣汰的法则，也就是寻优过程中仿照遗传机制，将优秀基因（建模的重点）进行选择（selection）、交叉(crossover)、变异(mutation)，其中由适应度函数来判断基因的优劣，，以产生更加优秀的基因为目的，使基因不断进化的一种算法。">
+<meta name="twitter:image" content="d:/bolgs/source/images/遗传算法步骤.png">
 
 
 
@@ -121,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="https://domyslavy.github.io/about/">
+  <link rel="canonical" href="https://domyslavy.github.io/数学建模/遗传算法/">
 
 
 
 
 
-  <title>about | domyslavy'blogs</title>
+  <title>优化算法之遗传算法 | domyslavy'blogs</title>
   
 
 
@@ -294,34 +298,346 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://domyslavy.github.io/数学建模/遗传算法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="domyslavy">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="domyslavy'blogs">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">about</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <p>我是一个普通的计算机17级本科生</p>
-
+          <h1 class="post-title" itemprop="name headline">优化算法之遗传算法</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-10T12:02:25+08:00">
+                2019-03-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数学建模/" itemprop="url" rel="index">
+                    <span itemprop="name">数学建模</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/数学建模/遗传算法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="数学建模/遗传算法/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2.4k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  8
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p><strong>说在前面:</strong> 遗传算法（genetic algorithm，GA）是模拟自然界生物进化的机制的一种算法，即遵循适者生存、优胜劣汰的法则，也就是寻优过程中仿照遗传机制，将优秀基因（建模的重点）进行选择（selection）、交叉(crossover)、变异(mutation)，其中由适应度函数来判断基因的优劣，，以产生更加优秀的基因为目的，使基因不断进化的一种算法。</p>
+<a id="more"></a> 
+<p>注意：遗传算法在适应度函数选择不当的情况下有可能收敛于局部最优，而不能达到全局最优。更加客观的说，一个问题的全局最优往往很难通过基于概率的算法得到，无法遍历整个求解的空间，往往是快速的找到一个足够好的答案，因为有些问题在遍历整个求解空间的复杂性是难以接受的。</p>
+<h2 id="1-1-遗传算法的基本概念"><a href="#1-1-遗传算法的基本概念" class="headerlink" title="1.1 遗传算法的基本概念"></a>1.1 遗传算法的基本概念</h2><h3 id="1-1-1-遗传算法的基本运算"><a href="#1-1-1-遗传算法的基本运算" class="headerlink" title="1.1.1 遗传算法的基本运算"></a>1.1.1 遗传算法的基本运算</h3><p>遗传算法是从代表问题可能潜在的解集的一个种群开始的，而一个种群则由经过基因编码的一定数目的个体组成。基因是决定个体形状的外在表现，如黑头发的特征是有染色体中控制这一特征的某种基因组合决定的。因此，在一开始需要实现从表现型到基因型的映射即 <strong>编码工作</strong>。</p>
+<p>由于生物的基因编码的工作复杂，我们一般采取简化，如二进制编码。初代种群产生之后，按照适者生存和优胜劣汰的原理，逐代演化产生出越来越好的近似解，<strong><em>在每一代，根据问题域中个体的适应度大小选择个体，并借助于自然遗传学的遗传算子（genetic operators）进行组合交叉 和 变异，产生出新的解集的种群。</em></strong> </p>
+<h3 id="1-1-2-遗传算法的特点"><a href="#1-1-2-遗传算法的特点" class="headerlink" title="1.1.2 遗传算法的特点"></a><strong>1.1.2 遗传算法的特点</strong></h3><p>遗传算法是一种解决搜索问题的一种通用算法，对于各种通用问题都可以使用。</p>
+<ol>
+<li>遗传算法从问题解的串集开始搜索，而不是从单个解开始。传统的优化算法是从单个初始值迭代求最优解的，容易误入局部最优解，而遗传算法从串集开始搜索，覆盖面大，利于全局择优。</li>
+<li>同时遗传算法处理群体中的多个个体（相同基因），减少陷入局部最优解的风险。</li>
+<li>遗传算法基本上不用搜索空间的知识或其他辅助信息，而进用适应度函数来评估个体，在此基础上进行遗传操作。</li>
+<li>遗传算法不是采用确定性规则，而是采用概率的变迁规则来指导搜索的方向。</li>
+<li>具有自组织、自适应、自学习性。遗传算法利用进化过程中获得的信息自行组织搜索时， 适应性大的个体具有较高的生存概率，并获得更适应环境的基因结构。</li>
+</ol>
+<h3 id="1-1-3-遗传算法中的术语"><a href="#1-1-3-遗传算法中的术语" class="headerlink" title="1.1.3 遗传算法中的术语"></a>1.1.3 遗传算法中的术语</h3><ol>
+<li><strong>染色体：</strong>(chromosome)又可以称为基因型个体，一定数量的个体组成了群体，群体中个体的数量称为群体大小。</li>
+<li><strong>基因：</strong>基因是串中的元素，基因用于表示个体的特征。</li>
+<li><strong>基因位点：</strong>是算法中表示一个基因在串中的位置。</li>
+<li><strong>特征值：</strong> 在用串表示整数时，基因的特征值与二进制数的权一致。</li>
+<li><strong>适应度：</strong>各个个体对环境的适应度。为了体现染色体的适应能力，引入了对问题中的每一个染色体都能进行度量的函数，叫适应度函数。</li>
+</ol>
+<h4 id="1-1-4-遗传算法的发展现状"><a href="#1-1-4-遗传算法的发展现状" class="headerlink" title="1.1.4 遗传算法的发展现状"></a><strong>1.1.4 遗传算法的发展现状</strong></h4><p>略</p>
+<h3 id="1-1-5-遗传算法的应用领域"><a href="#1-1-5-遗传算法的应用领域" class="headerlink" title="1.1.5 遗传算法的应用领域"></a>1.1.5 遗传算法的应用领域</h3><p>由于遗传算法的整体搜索策略和优化搜索方法在计算时不依赖于<strong>梯度信息或其他辅助知识</strong>（其他算法的依赖信息，比如梯度下降算法等），而只需要影响搜索方向的目标函数和相应的适应度函数，所以遗传算法提供了一种求解复杂系统问题的通用框架，不依赖与问题的具体领域。</p>
+<p>遗传算法主要应用于以下两个领域：</p>
+<ol>
+<li><h4 id="函数优化"><a href="#函数优化" class="headerlink" title="函数优化"></a>函数优化</h4></li>
+</ol>
+<p>不太理解这块。</p>
+<ol start="2">
+<li><h4 id="组合优化"><a href="#组合优化" class="headerlink" title="组合优化"></a>组合优化</h4></li>
+</ol>
+<p>随着问题规模增大，组合优化问题的搜索空间也急剧增大，有时在目前的计算上用枚举法很难求出最优解。面对这类问题大家更多的精力是放在满意解上，而遗传算法就是寻求这种满意解的最佳工具之一。实践证明，遗传算法对于组合优化中的NP问题非常有效。例如旅行商TSP问题、背包问题、装箱问题等等。GA算法在生成调度方面、自动控制方面、等等取得了广泛应用。</p>
+<h2 id="1-2-遗传算法的原理"><a href="#1-2-遗传算法的原理" class="headerlink" title="1.2 遗传算法的原理"></a>1.2 遗传算法的原理</h2><p>遗传算法是计算机科学中用于解决最优化的一种搜索<a href="https://zh.wikipedia.org/wiki/%E5%90%AF%E5%8F%91%E5%BC%8F%E6%90%9C%E7%B4%A2" target="_blank" rel="noopener">启发式算法</a>，是进化算法的一种。</p>
+<h3 id="1-2-1-算法运算过程"><a href="#1-2-1-算法运算过程" class="headerlink" title="1.2.1 算法运算过程"></a>1.2.1 算法运算过程</h3><p>在遗传算法中，通过编码组成初始群体后，遗传操作的任务就是对群体的个体按照他们对环境适应度施加一定的操作，从而实现优胜劣汰的进化过程。</p>
+<p><img src="D:\bolgs\source\images\遗传算法步骤.png" alt="遗传算法步骤"></p>
+<p><strong>遗传操作包括：</strong> 选择遗传算子、交叉遗传算子、变异遗传算子</p>
+<ol>
+<li><h4 id="选择"><a href="#选择" class="headerlink" title="选择"></a>选择</h4></li>
+</ol>
+<p>群体中选择优胜的个体，淘汰劣质个体的操作叫选择。选择的目的是把优化的个体直接遗传到下一代或通过配对交叉产生新的个体再遗传到下一代。</p>
+<p>选择算子方法：轮盘赌选择法、适应度比例法、随机遍历抽样法、局部选择法。</p>
+<p>轮盘赌选择法：是最简单和最常用的选择方法。各个隔日的选择概率和其适应度值成比例。设群体大小为 n ，其中个体 $ i $ 的适应度为$  f_{i } $，则被选择的概率为  $$  p_{ i } = f_{ i }  / ( f_1 + f_2 + f_3 …… + f_n )  $$</p>
+<ol start="2">
+<li><h4 id="交叉"><a href="#交叉" class="headerlink" title="交叉"></a>交叉</h4></li>
+</ol>
+<p>​        交叉是指把两个父代个体的部分结构加以替换重组而生成新个体的操作。通过交叉，遗传算法的搜索能力得以飞跃提高。交叉算子根据交叉率将种群中的两个个体随机地交换某种基因，能够产生新的基因组合，基因将有益基因组合在一起，根据编码方式的不同分为以下几种算法。</p>
+<ul>
+<li>实值重组：离散重组、中间重组、线性重组、扩展线性重组</li>
+<li>二进制交叉：单点交叉、多点交叉、均匀交叉、洗牌交叉、缩小代理交叉</li>
+</ul>
+<p>最常用的交叉算子为单点交叉。其具体操作是在个体串中随机的设定一个交叉点，实行交叉时，该点前或后的两个个体的部分结构进行互换，并生成两个新个体。如图:</p>
+<p><img src="D:\bolgs\source\images\交叉算子例子.png" alt="交叉算子例子"></p>
+<ol start="3">
+<li><h4 id="变异"><a href="#变异" class="headerlink" title="变异"></a>变异</h4></li>
+</ol>
+<p>变异算子的基本内容时对群体中的个体串的某些基因座上的基因值做变动。依据个体编码表示方法的不同，分为实值变异、二进制变异。</p>
+<p><strong>基本操作步骤:</strong> </p>
+<ol>
+<li>对群中所有个体以事先设定的变异概率判断是否进行变异</li>
+<li>对进行变异的个体随机选择变异位进行变异</li>
+</ol>
+<p><strong>引入变异的两个目的：</strong></p>
+<ol>
+<li>使遗传算法具有局部的随机搜索能力。<strong><em>当遗传算法通过交叉算子已接近最优解领域时，利用变异算子的这种局部随机搜索能力可以加速向最优解收敛。（为啥呢，单个位点的变化，作用真的会达到如此之大？？），此种情况下的变异概率应取较小值，否则解近最优解的积木块会因变异而遭到破坏。（这句话也不太明白）</em></strong></li>
+<li>使遗传算法可维持群体多样性，以防止出现未成熟收敛现象。此时收敛概率应选较大值。</li>
+</ol>
+<blockquote>
+<p><strong>遗传算法中，交叉算子因其全局搜索功能而作为主要算子，变异算子因其局部搜索能力而作为辅助算子。遗传算法通过交叉和变异这对互相配对又互相竞争的操作而使其具备兼顾全局和局部的均衡搜索能力。 </strong></p>
+</blockquote>
+<h3 id="1-2-2-算法编码"><a href="#1-2-2-算法编码" class="headerlink" title="1.2.2 算法编码"></a>1.2.2 算法编码</h3><p>遗传算法不能直接处理问题空间的参数，必须把它们转换成遗传空间的由基因按一定结构组成的染色体或个体。<strong>这一转换操作称为编码，也可以称为（问题的）表示。</strong> 这一步骤比较难。</p>
+<h3 id="1-2-3-适应度及其群体选取"><a href="#1-2-3-适应度及其群体选取" class="headerlink" title="1.2.3 适应度及其群体选取"></a>1.2.3 适应度及其群体选取</h3><p>进化论中的适应度，是表示某一个个体对环境的适应能力，也表示该个体繁殖后代的能力。遗传算法的适应度函数是用来判断群体中的个体的优劣程度的指标，它是根据所求问题的目标函数来进行评估的。</p>
+
       
     </div>
     
     
     
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div>
+    <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/数学建模/遗传算法/">优化算法之遗传算法</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 domyslavy 的个人博客">domyslavy</a></p>
+  <p><span>发布时间:</span>2019年03月10日 - 12:03</p>
+  <p><span>最后更新:</span>2019年03月15日 - 16:03</p>
+  <p><span>原始链接:</span><a href="/数学建模/遗传算法/" title="优化算法之遗传算法">https://domyslavy.github.io/数学建模/遗传算法/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://domyslavy.github.io/数学建模/遗传算法/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+    });
+    });  
+</script>
+
+      
+    </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/数学建模/" <i class="fa fa-tag"> 数学建模 </a>
+          
+            <a href="/tags/优化/" <i class="fa fa-tag"> 优化 </a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/计算机原理/CSAPP笔记/" rel="next" title="CS:APP笔记(持续更新)">
+                <i class="fa fa-chevron-left"></i> CS:APP笔记(持续更新)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript">
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
   </div>
 
 
@@ -363,8 +679,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -456,6 +781,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-遗传算法的基本概念"><span class="nav-number">1.</span> <span class="nav-text">1.1 遗传算法的基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-1-遗传算法的基本运算"><span class="nav-number">1.1.</span> <span class="nav-text">1.1.1 遗传算法的基本运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-2-遗传算法的特点"><span class="nav-number">1.2.</span> <span class="nav-text">1.1.2 遗传算法的特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-3-遗传算法中的术语"><span class="nav-number">1.3.</span> <span class="nav-text">1.1.3 遗传算法中的术语</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-4-遗传算法的发展现状"><span class="nav-number">1.3.1.</span> <span class="nav-text">1.1.4 遗传算法的发展现状</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-5-遗传算法的应用领域"><span class="nav-number">1.4.</span> <span class="nav-text">1.1.5 遗传算法的应用领域</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#函数优化"><span class="nav-number">1.4.1.</span> <span class="nav-text">函数优化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#组合优化"><span class="nav-number">1.4.2.</span> <span class="nav-text">组合优化</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-遗传算法的原理"><span class="nav-number">2.</span> <span class="nav-text">1.2 遗传算法的原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-1-算法运算过程"><span class="nav-number">2.1.</span> <span class="nav-text">1.2.1 算法运算过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#选择"><span class="nav-number">2.1.1.</span> <span class="nav-text">选择</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#交叉"><span class="nav-number">2.1.2.</span> <span class="nav-text">交叉</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#变异"><span class="nav-number">2.1.3.</span> <span class="nav-text">变异</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-2-算法编码"><span class="nav-number">2.2.</span> <span class="nav-text">1.2.2 算法编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-3-适应度及其群体选取"><span class="nav-number">2.3.</span> <span class="nav-text">1.2.3 适应度及其群体选取</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -642,9 +983,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://domyslavy.github.io/about/index.html';
-          this.page.identifier = 'about/index.html';
-          this.page.title = 'about';
+          this.page.url = 'https://domyslavy.github.io/数学建模/遗传算法/';
+          this.page.identifier = '数学建模/遗传算法/';
+          this.page.title = '优化算法之遗传算法';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://.disqus.com/embed.js';
